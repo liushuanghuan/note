@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tooltip</title>
+
+	<style>
+		.tooltip {
+			display: inline;
+			position: relative; 
+		}
+
+		.tooltip:hover .tooltip-content {
+			opacity: 1;
+			display: block;
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+			transition: opacity 0.3s, transform 0.3s;
+		}
+
+		.tooltip-content {
+			position: absolute;
+			left: 50%;
+			color: #5a5a5a;
+			border: 2px solid #0B4F72;
+			border-radius: 4px;
+			width: 360px;
+			margin-left: -185px;
+			/*transform: translateX(-50%);*/
+			background: #dededd;
+			padding: 0 5px 5px 5px;
+			margin-top: 10px;
+			text-align: center;
+			display: none;
+			z-index: 1;
+			word-wrap: break-word;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		.tooltip-content::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+		}
+
+		.tooltip-info {
+			text-indent: 2em;
+		}
+
+		.tooltip-title {
+			font-weight: bold;
+		}
+
+		.tooltip-close {
+			position: absolute;
+		    right: 10px;
+		    top: 0;
+		    text-align: center;
+		    color: #0B4F72;
+		    font-size: 14px;
+		    font-weight: bold;
+		    line-height: 20px;
+		}
+
+		.line {
+			position: absolute;
+			left: 50%;
+			height: 10px;
+			border-left: 2px solid #0B4F72;
+			margin-top: -10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="tooltip tooltip-effect-bottom" style="margin-left: 400px;">
+		help
+		
+		<div class="tooltip-content">
+			<div class="line"></div>
+			<div class="tooltip-title">标题</div>
+			<div class="tooltip-close">×</div>
+			<div class="tooltip-info">hgjdsfhgk,jdhgkdjghdjkfhgdkj,fhgdkjfhgdjfhgdfjhgdfjhgd,fkjhgdfjghdfjhgdfjhgdfhgkjhgkdhgdjkfhgdjk,fghdkjfghdfjghdfjgdfhgjdfhgdjfhgdfjghdfjghdfjghdfjghjfg</div>
+		</div>
+		<!-- <span class="tooltip-effect-bottom tooltip-content">hgjdsfhgk,jdhgkdjghdjkfhgdkj,fhgdkjfhgdjfhgdfjhgdfjhgd,fkjhgdfjghdfjhgdfjhgdfhgkjhgkdhgdjkfhgdjk,fghdkjfghdfjghdfjgdfhgjdfhgdjfhgdfjghdfjghdfjghdfjghjfg</span> -->
+		<!-- <div class="tooltip-effect-bottom tooltip-content">
+			<div>标题</div>
+			<div class="show-info-wan">×</div>
+			价格的广东福建会馆打开攻击对方立刻高级饭店冷库，景观客房价格结果发的了解顾客价格的疯狂攻击高等级的付,款了价格肯定发给就离开德国韩国客户就黑客攻防回来好几个开个会好看护林防火咖啡馆能够发货尽快立法
+		</div> -->
+		
+	</div>
+	
+</body>
+</html>
