@@ -1,0 +1,366 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @liushuanghuan Sign out
+0
+0 0 liushuanghuan/note
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+note/tiny-http/sublime安装eslint(周安).html
+e872666  a day ago
+@liushuanghuan liushuanghuan Add files via upload
+     
+392 lines (332 sloc)  12 KB
+<!DOCTYPE html>
+<html>
+<head>
+<title>sublime安装eslint</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+/* RESET
+=============================================================================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* BODY
+=============================================================================*/
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+body>*:first-child {
+  margin-top: 0 !important;
+}
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+/* BLOCKS
+=============================================================================*/
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+/* HEADERS
+=============================================================================*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+/* LINKS
+=============================================================================*/
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* LISTS
+=============================================================================*/
+ul, ol {
+  padding-left: 30px;
+}
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+dl {
+  padding: 0;
+}
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+dl dt:first-child {
+  padding: 0;
+}
+dl dt>:first-child {
+  margin-top: 0px;
+}
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+dl dd>:first-child {
+  margin-top: 0px;
+}
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+/* CODE
+=============================================================================*/
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+/* QUOTES
+=============================================================================*/
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+blockquote>:first-child {
+  margin-top: 0px;
+}
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+/* HORIZONTAL RULES
+=============================================================================*/
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+/* TABLES
+=============================================================================*/
+table th {
+  font-weight: bold;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+/* IMAGES
+=============================================================================*/
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h3>sublime安装eslint</h3>
+<p>最近想在sublime里面加入eslint插件，并且可以自动解决某些格式错误问题。</p>
+<ol>
+<li>node 全局安装eslint  npm install -g eslint</li>
+<li>sublime 安装插件eslint、ESLint-Formatter</li>
+<li>
+<p>配置sublime的eslint配置  preferences -&gt; package-settings -&gt; eslint -&gt; Setting-default</p>
+<pre><code>node_path:  //node.exe 路径 如：C:/Program Files/nodejs
+node_modules_path: //npm包 eslint路径  如：F:/npm/node_modules
+config_file&quot;： //eslint规则文件路径 如：F:/npm/.eslintrc.js
+</code></pre>
+
+</li>
+<li>
+<p>配置ESLint-Formatter  preferences -&gt; package-settings -&gt; ESLint-Formatter -&gt; Setting</p>
+<pre><code>修改user配置
+{
+    &quot;format_on_save&quot;: true,  //是否保存执行
+    &quot;config_path&quot;: &quot;F:/npm/.eslintrc.js&quot;, //eslint规则文件 与上面eslint文件一致
+}
+</code></pre>
+
+</li>
+</ol>
+<p>.eslintrc.js配置如下，可以自行修改规则</p>
+<pre><code>    module.exports = {
+      //因为有ES6语法 ，需要先用babel进行转换才能正确识别，否则会报错 import有错误之类的
+      parser: &quot;babel-eslint&quot;,
+      rules: {
+        /*
+         *以下的 off||0代表关闭  warm||1代表抛出Error，不会使编译退出  
+         *error||2代表抛出错误，会导致编译退出
+         *其中增加了process.env.NODE_ENV变量   
+         *process.env.NODE_ENV==='publish'表示发布环境 
+         *process.env.NODE_ENV==='dev'表示开发调试环境，可以通过这个来配置不同环境下的检查项
+         */
+        //以下为配置项    
+        //详细文档       http://eslint.cn/docs/rules
+        &quot;quotes&quot;: [0, &quot;double&quot;],//引号类型  强制 &quot;&quot; '' 
+        &quot;semi&quot;: [1, &quot;always&quot;],//语句强制分号结尾
+        &quot;no-console&quot;: process.env.NODE_ENV === 'dev' ? 2 : 0,//不允许console  建议调试环境关闭 
+        &quot;no-alert&quot;: 0,//禁止使用alert confirm prompt
+        &quot;no-cond-assign&quot;: 2,//禁止在条件表达式中使用赋值语句
+        &quot;no-const-assign&quot;: 2,//禁止修改const声明的变量
+        &quot;no-constant-condition&quot;: 2,//禁止在条件中使用常量表达式 if(true) if(1)
+        &quot;no-debugger&quot;: process.env.NODE_ENV === 'publish' ? 2 : 0,//禁止使用debugger  建议调试环境关闭
+        &quot;no-div-regex&quot;: 1,//不能使用看起来像除法的正则表达式/=foo/
+        &quot;no-dupe-keys&quot;: 2,//在创建对象字面量时不允许键重复 {a:1,a:1}
+        &quot;no-dupe-args&quot;: 2,//函数参数不能重复
+        &quot;no-duplicate-case&quot;: 2,//switch中的case标签不能重复
+        &quot;no-empty&quot;: 0,//块语句中的内容不能为空
+        &quot;no-eq-null&quot;: 0,//禁止对null使用==或!=运算符
+        &quot;no-eval&quot;: 0,//禁止使用eval
+        &quot;no-ex-assign&quot;: 1,//禁止给catch语句中的异常参数赋值
+        &quot;no-extend-native&quot;: 0,//禁止扩展native对象   禁止修改prototype
+        &quot;no-extra-parens&quot;: 0,//禁止非必要的括号   有时候多余的括号能使逻辑更清晰
+        &quot;no-extra-semi&quot;: 2,//禁止多余的冒号
+        &quot;no-floating-decimal&quot;: 2,//禁止省略浮点数中的0 .5 3.
+        &quot;no-func-assign&quot;: 2,//禁止重复的函数声明
+        &quot;no-inline-comments&quot;: 0,//禁止行内备注
+        &quot;no-inner-declarations&quot;: [0, &quot;functions&quot;],//禁止在块语句中使用声明（变量或函数）
+        &quot;no-multiple-empty-lines&quot;: [1, { &quot;max&quot;: 3 }],//空行最多不能超过3行
+        &quot;arrow-parens&quot;: 0,//箭头函数用小括号括起来
+        &quot;arrow-spacing&quot;: 0,//=&gt;的前/后括号
+        &quot;camelcase&quot;: 1,//强制驼峰法命名
+        &quot;comma-spacing&quot;: 0,//逗号前后的空格
+        &quot;comma-style&quot;: [0, &quot;last&quot;],//逗号风格，换行时在行首还是行尾
+        &quot;consistent-return&quot;: 0,//return 后面是否允许省略
+        &quot;consistent-this&quot;: [0, &quot;that&quot;],//this别名
+        &quot;default-case&quot;: 0,//switch语句最后必须有default
+        &quot;dot-location&quot;: 0,//对象访问符的位置，换行的时候在行首还是行尾
+        &quot;dot-notation&quot;: [0, { &quot;allowKeywords&quot;: true }],//避免不必要的方括号
+        &quot;eqeqeq&quot;: 0,//必须使用全等
+        &quot;guard-for-in&quot;: 0,//for in循环要用if语句过滤
+        &quot;id-length&quot;: 0,//变量名长度
+        &quot;init-declarations&quot;: 0,//声明时必须赋初值
+        &quot;new-cap&quot;: 0,//函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用        由于组件的使用都是大写  暂时关闭
+        &quot;new-parens&quot;: 2,//new时必须加小括号
+        &quot;one-var&quot;: 0,//连续声明    最好不要开启，要不满屏的绿色 
+        &quot;operator-linebreak&quot;: [0, &quot;after&quot;],//换行时运算符在行尾还是行首
+        &quot;padded-blocks&quot;: 0,//块语句内行首行尾是否要空行
+        &quot;quote-props&quot;:[0, &quot;always&quot;],//对象字面量中的属性名是否强制双引号     consistent-as-needed：如果有属性名称要求使用引号，则所有的属性名称都要使用引号；否则，禁止所有的属性名称使用引号
+        &quot;radix&quot;: 1,//parseInt必须指定第二个参数
+        &quot;id-match&quot;: 0,//命名检测
+        &quot;semi-spacing&quot;: [0, {&quot;before&quot;: false, &quot;after&quot;: true}],//分号前后空格
+        &quot;sort-vars&quot;: 0,//变量声明时排序
+        &quot;space-after-keywords&quot;: [0, &quot;always&quot;],//关键字后面是否要空一格
+        &quot;use-isnan&quot;: 2,//禁止比较时使用NaN，只能用isNaN()
+        &quot;valid-typeof&quot;: 2,//必须使用合法的typeof的值
+        &quot;vars-on-top&quot;: 0//var必须放在作用域顶部
+      }
+    }
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
+? 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+Press h to open a hovercard with more details.
